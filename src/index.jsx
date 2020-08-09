@@ -2,13 +2,16 @@ import React from 'react';
 import { View } from 'react-native';
 
 //components
-import Test from 'components/Test';
+//import Navigator from './screens/Main/Main.screen';
 
-const App: React.FC = ({}) => {
+import Navigator from './components/Test/Test.component';
+
+const App = () => {
 	return (
 		<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-			<Test name='Test' />
+			<Navigator />
 		</View>
+
 	);
 };
 
