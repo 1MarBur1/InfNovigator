@@ -5,9 +5,10 @@ import styles from './CustomButton.styles';
 
 const CustomButton = ({
 	header,
+	style,
 }) => {
 	return (
-		<TouchableOpacity style={styles.button}>
+		<TouchableOpacity style={[styles.button, style]}>
 			<Text style = {styles.buttonText}>{header}</Text>
 		</TouchableOpacity>
 	);

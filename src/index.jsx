@@ -1,9 +1,10 @@
-
 import React from 'react';
 import { View, StatusBar } from 'react-native';
 
 //components
-import Navigator from './screens/MainScreen/Main.screen';
+import Navigator from './screens/Main/Main.screen';
+import Languages from './screens/LanguageSelection/LanguageSelection.screen';
+import Sights from './screens/Sights/Sights.screen';
 
 const App = () => {
 	return (
@@ -12,11 +13,10 @@ const App = () => {
 				backgroundColor='#ffffff'
 				barStyle='dark-content' />
 
-			<Navigator />
+			<Sights />
 		</View>
 
 	);
 };
 
 export default App;
-
