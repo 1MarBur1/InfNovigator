@@ -1,11 +1,11 @@
-import { StyleSheet, AccessibilityInfo } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Colors } from 'theme';
 
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		width: '100%',
-		backgroundColor: '#FFFFFF',
+		backgroundColor: '#ffffff',
 		justifyContent: 'center',
 		alignItems: 'center',
 	},
@@ -16,13 +16,13 @@ const styles = StyleSheet.create({
 		textAlign: 'center',
 	},
 	text: {
-		fontSize: 12,
+		fontSize: 15,
 		fontFamily: 'Comfortaa-Regular',
 		color: '#858585',
 	},
 	containerText: {
 		position: 'absolute',
-		bottom: 40,
+		bottom: 50,
 	},
 });
 
