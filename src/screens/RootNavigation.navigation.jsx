@@ -1,9 +1,11 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 
 //screens
 import Main from './Main/Main.screen';
 import Languages from './LanguageSelection/LanguageSelection.screen';
+import MyWay from './MyWay/MyWay.screen';
+import Sights from './Sights/Sights.screen';
+import PreparedWay from './PreparedWay/PreparedWay.screen';
 
 //nav
 import { createStackNavigator } from '@react-navigation/stack';
@@ -15,7 +17,31 @@ const RootNavigation = () => (
 
 		<Stack.Screen
 			name='root/main'
-			component={Main} />
+			component={Main}
+			options={{
+				headerShown: false,
+			}} />
+
+		<Stack.Screen
+			name='root/languages'
+			component={Languages}
+			options={{
+				headerShown: false,
+			}} />
+
+		<Stack.Screen
+			name='root/sights'
+			component={Sights}
+			options={{
+				headerShown: false,
+			}} />
+
+		<Stack.Screen
+			name='root/myWay'
+			component={MyWay}
+			options={{
+				headerShown: false,
+			}} />
 
 	</Stack.Navigator>
 );

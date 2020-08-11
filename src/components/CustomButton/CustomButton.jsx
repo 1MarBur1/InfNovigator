@@ -6,9 +6,13 @@ import styles from './CustomButton.styles';
 const CustomButton = ({
 	header,
 	style,
+	onPress,
 }) => {
 	return (
-		<TouchableOpacity style={[styles.button, style]}>
+		<TouchableOpacity
+			style={[styles.button, style]}
+			onPress = {onPress}
+		>
 			<Text style = {styles.buttonText}>{header}</Text>
 		</TouchableOpacity>
 	);

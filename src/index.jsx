@@ -1,21 +1,22 @@
+import 'react-native-gesture-handler';
 import React from 'react';
-import { View, StatusBar } from 'react-native';
+import { StatusBar } from 'react-native';
+import RootNavigation from './screens/RootNavigation.navigation';
 
-//components
-import Navigator from './screens/Main/Main.screen';
-import Languages from './screens/LanguageSelection/LanguageSelection.screen';
-import Sights from './screens/Sights/Sights.screen';
+//nav
+import { NavigationContainer } from '@react-navigation/native';
+import { MyWay, PreparedWay } from 'screens';
 
 const App = () => {
 	return (
-		<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+		<NavigationContainer>
+
 			<StatusBar
 				backgroundColor='#ffffff'
 				barStyle='dark-content' />
 
-			<Sights />
-		</View>
-
+			<RootNavigation />
+		</NavigationContainer>
 	);
 };
 

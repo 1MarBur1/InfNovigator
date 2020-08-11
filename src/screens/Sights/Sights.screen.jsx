@@ -7,11 +7,15 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 //styles
 import styles from './Sights.styles';
 
+//nav
+import { useNavigation } from '@react-navigation/native';
+
 const Sights = () => {
+	const navigation = useNavigation();
 	return (
 		<View style = {styles.container}>
 
-			<TouchableOpacity style={styles.touchContainer}>
+			<TouchableOpacity style={styles.touchContainer} onPress={() => navigation.navigate('root/languages')}>
 				<Ionicons
 					name='arrow-back-outline'
 					size={30}
