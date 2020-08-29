@@ -10,11 +10,16 @@ import styles from './MyWay.styles';
 //icons
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
+//nav
+import { useNavigation } from '@react-navigation/native';
+
 const MyWay = () => {
+	const navigation = useNavigation();
+
 	return (
 		<View style={styles.container} >
 			<View style = {styles.headerContainer}>
-				<TouchableOpacity>
+				<TouchableOpacity onPress={() => navigation.navigate('root/languages')}>
 					<Ionicons
 						name='arrow-back-outline'
 						size={30}
@@ -171,14 +176,14 @@ const MyWay = () => {
 
 					<View style={styles.imageContainer}>
 						<Image source={require('./eltsin.jpg')} style={styles.image} />
-						<Text style={styles.imageText} >Ельин центр</Text>
+						<Text style={styles.imageText} >Ельцин центр</Text>
 					</View>
 				</View>
 
-				<View style={styles.raw}>PreparedWay
+				<View style={styles.raw}>
 					<View style={styles.imageContainer}>
 						<Image source={require('./fontan.jpg')} style={styles.image} />
-						<Text style={styles.imageText} >Фонтан на Драмме </Text>
+						<Text style={styles.imageText} >Фонтан на Драме</Text>
 					</View>
 
 					<View style={styles.imageContainer}>
@@ -197,6 +202,7 @@ const MyWay = () => {
 						<Image source={require('./klava.jpg')} style={styles.image} />
 						<Text style={styles.imageText} >Памятник клавиатуре</Text>
 					</View>
+
 				</View>
 
 				<View style={styles.raw}>
@@ -211,12 +217,10 @@ const MyWay = () => {
 					</View>
 				</View>
 
-				<View style={styles.go} />
 			</ScrollView>
 
 		</View>
 
 	);
 };
-
 export default MyWay;

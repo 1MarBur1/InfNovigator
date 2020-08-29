@@ -18,8 +18,8 @@ const Languages = () => {
 			<Text style={styles.headingText}>LANGUAGE ЯЗЫК</Text>
 
 			<View style={styles.buttonContainer}>
-				<CustomButton header='EN' />
-				<CustomButton header='RU' onPress={() => navigation.navigate('root/sights')} />
+				<CustomButton header='EN' onPress={() => navigation.navigate('root/myWay')} />
+				<CustomButton header='RU' onPress={() => navigation.navigate('root/map')} />
 			</View>
 
 		</View>

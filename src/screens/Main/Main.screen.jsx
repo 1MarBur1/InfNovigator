@@ -4,10 +4,6 @@ import { Text, View, TouchableOpacity } from 'react-native';
 // styles
 import styles from './Main.styles';
 
-//components
-import { CustomButton } from '../../components';
-import { NavigationContainer } from '@react-navigation/native';
-
 //nav
 import { useNavigation } from '@react-navigation/native';
 

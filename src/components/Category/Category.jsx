@@ -8,7 +8,7 @@ const Button = ({
 }) => {
 	return (
 		<TouchableOpacity style = {styles.button}>
-			<Text style = {[styles.buttonText]}>{text}</Text>
+			<Text style = {styles.buttonText}>{text}</Text>
 		</TouchableOpacity>
 	);
 };
