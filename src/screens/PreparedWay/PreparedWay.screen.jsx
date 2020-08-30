@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
+import { Text, View, TouchableOpacity } from 'react-native';
 
 //components
 import Category from '../../components/Category/Category';
@@ -10,11 +10,16 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 //styles
 import styles from './PreparedWay.styles';
 
+//nav
+import { useNavigation } from '@react-navigation/native';
+
 const PreparedWay = () =>{
+	const navigation = useNavigation();
+
 	return (
 		<View style = {styles.container}>
 			<View style={styles.headerContainer}>
-				<TouchableOpacity>
+				<TouchableOpacity onPress={() => navigation.navigate('root/map')}>
 					<Ionicons
 						name='arrow-back-outline'
 						size={31}
@@ -33,7 +38,8 @@ const PreparedWay = () =>{
 			<TouchableOpacity style={styles.button}>
 				<Text style = {styles.buttonText}>Большой круг</Text>
 			</TouchableOpacity>
-			<Text style={[styles.text, { fontFamily: 'Comfortaa-Bold' }]}>7680 метров</Text>
+			<Text style={styles.text}>Маршрут включает в себя 30 незабываемых точек города Екатеринбурга</Text>
+			<Text style={[styles.text, { marginTop: 5, fontFamily: 'Comfortaa-Bold' }]}>7680 метров</Text>
 
 			<TouchableOpacity style={[styles.button, { marginTop: 30 }]}>
 				<Text style={styles.buttonText}>Малый круг</Text>

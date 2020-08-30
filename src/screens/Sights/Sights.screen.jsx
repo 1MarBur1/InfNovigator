@@ -15,7 +15,7 @@ const Sights = () => {
 	return (
 		<View style = {styles.container}>
 
-			<TouchableOpacity style={styles.touchContainer} onPress={() => navigation.navigate('root/languages')}>
+			<TouchableOpacity style={styles.touchContainer} onPress={() => navigation.navigate('root/map')}>
 				<Ionicons
 					name='arrow-back-outline'
 					size={30}

@@ -1,7 +1,8 @@
 import 'react-native-gesture-handler';
 import React from 'react';
 import { StatusBar } from 'react-native';
-import RootNavigation from './screens/RootNavigation.navigation';
+import StackNavigation from './screens/StackNavigation.navigation';
+import DrawerNavigation from './screens/DrawerNavigator/DrawerNavigation.navigation';
 
 //nav
 import { NavigationContainer } from '@react-navigation/native';
@@ -15,7 +16,7 @@ const App = () => {
 				backgroundColor='#ffffff'
 				barStyle='dark-content' />
 
-			<RootNavigation />
+			<StackNavigation />
 		</NavigationContainer>
 	);
 };

@@ -6,14 +6,16 @@ import Languages from './LanguageSelection/LanguageSelection.screen';
 import MyWay from './MyWay/MyWay.screen';
 import Sights from './Sights/Sights.screen';
 import PreparedWay from './PreparedWay/PreparedWay.screen';
-import Map from './Map/Map.screen';
+
+//navigators
+import DrawerNavigation from './DrawerNavigator/DrawerNavigation.navigation';
 
 //nav
 import { createStackNavigator } from '@react-navigation/stack';
 
 const Stack = createStackNavigator();
 
-const RootNavigation = () => (
+const StackNavigation = () => (
 	<Stack.Navigator initialRouteName='root/main'>
 
 		<Stack.Screen
@@ -46,7 +48,7 @@ const RootNavigation = () => (
 
 		<Stack.Screen
 			name='root/map'
-			component={Map}
+			component={DrawerNavigation}
 			options={{
 				headerShown: false,
 			}} />
@@ -61,4 +63,4 @@ const RootNavigation = () => (
 	</Stack.Navigator>
 );
 
-export default RootNavigation;
+export default StackNavigation;
